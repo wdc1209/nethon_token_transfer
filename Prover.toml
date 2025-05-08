@@ -1,0 +1,30 @@
+# Prover.toml for NETHON Token Transfer
+
+# === Private Inputs ===
+# These values are known only to the Prover.
+
+sender_secret = "12345"                 # Example: Prover's private key or secret seed.
+sender_balance_old = "1000"             # Example: Prover has 1000 NETHON.
+sender_balance_old_blinding = "55555"   # Example: Random blinding factor for old balance.
+transfer_amount = "150"                 # Example: Prover wants to transfer 150 NETHON.
+sender_balance_new_blinding = "77777"   # Example: Random blinding factor for new balance.
+
+# === Public Inputs ===
+# These values are known to both Prover and Verifier.
+#
+# !!! CRITICAL !!!
+# The hash values below (sender_id_hash, sender_balance_old_commitment, sender_balance_new_commitment)
+# are PLACEHOLDERS. You MUST recompute these using the actual private inputs above and the
+# `pedersen_hash` function from noir_stdlib.
+# For example:
+# sender_id_hash = pedersen_hash([sender_secret])
+# sender_balance_old_commitment = pedersen_hash([sender_balance_old, sender_balance_old_blinding])
+# sender_balance_new = sender_balance_old - transfer_amount
+# sender_balance_new_commitment = pedersen_hash([sender_balance_new, sender_balance_new_blinding])
+# Use a helper Noir script with `nargo exec` or a similar method to obtain the correct Field element strings.
+
+sender_id_hash = "2183219508603868079660503406119020513406426557250240121868236341583519001444" # PLACEHOLDER - RECOMPUTE
+recipient_id_hash = "9876543210987654321098765432109876543210"                                   # Example public ID for recipient.
+public_transfer_amount = "150"                                                                  # Must match private transfer_amount.
+sender_balance_old_commitment = "18359488966548357920928909875980857750061221413280100031736381100779000133488" # PLACEHOLDER - RECOMPUTE
+sender_balance_new_commitment = "11849122798308001402745165861343944194072900853913292744291387373640818322815" # PLACEHOLDER - RECOMPUTE

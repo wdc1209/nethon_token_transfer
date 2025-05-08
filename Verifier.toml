@@ -1,0 +1,13 @@
+# Verifier.toml for NETHON Token Transfer
+# The Verifier only knows these public inputs.
+
+# !!! CRITICAL !!!
+# These public input values MUST EXACTLY MATCH the public input values used by the Prover
+# (i.e., those in Prover.toml, after the hash values have been correctly recomputed).
+# The hash values below are PLACEHOLDERS and must be replaced with the actual, recomputed hash values.
+
+sender_id_hash = "2183219508603868079660503406119020513406426557250240121868236341583519001444" # PLACEHOLDER - MUST MATCH PROVER'S RECOMPUTED VALUE
+recipient_id_hash = "9876543210987654321098765432109876543210"                                   # Example public ID for recipient.
+public_transfer_amount = "150"
+sender_balance_old_commitment = "18359488966548357920928909875980857750061221413280100031736381100779000133488" # PLACEHOLDER - MUST MATCH PROVER'S RECOMPUTED VALUE
+sender_balance_new_commitment = "11849122798308001402745165861343944194072900853913292744291387373640818322815" # PLACEHOLDER - MUST MATCH PROVER'S RECOMPUTED VALUE
